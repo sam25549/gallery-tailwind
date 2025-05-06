@@ -1,1 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One&display=swap');
 @import "tailwindcss";
+
+@layer theme {
+  :root{
+    --default-font-family: Bowlby One, sans-serif;
+  }
+}
+
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--default-font-family);
+  }
+}
+
+@layer components {
+  .box {
+    @apply dark:bg-gray-800 shadow-md rounded-md col-span-1;
+  }
+}
