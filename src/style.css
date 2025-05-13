@@ -1,20 +1,48 @@
-@import url('https://fonts.googleapis.com/css2?family=Bowlby+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap');
 @import "tailwindcss";
 
 @layer theme {
-  :root{
-    --default-font-family: Bowlby One, sans-serif;
-  }
+    :root {
+        --default-font-family: "Cal Sans", sans-serif;
+    }
 }
 
 @layer base {
-  h1, h2, h3, h4, h5, h6 {
-    font-family: var(--default-font-family);
-  }
+    img {
+        @apply w-full !h-full object-cover;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        font-family: var(--default-font-family);
+    }
+    input {
+        @apply w-full !px-4 !py-2 !rounded-lg !border !border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500;
+    }
 }
 
 @layer components {
-  .box {
-    @apply dark:bg-gray-800 shadow-md rounded-md col-span-1;
-  }
+
+    .box {
+        @apply relative rounded flex items-center justify-center overflow-hidden border border-dashed border-gray-300 col-span-1 row-span-1 aspect-square p-2;
+    }
+      
+    .box-double {
+        @apply col-span-2 row-span-2;
+        aspect-ratio: 2 / 2; /* cuadrado grande */
+    }
+      
+    .box-portrait {
+        @apply col-span-1 row-span-2;
+        aspect-ratio: 1 / 2; /* vertical */
+    }
+      
+    .box-landscape {
+        @apply col-span-2 row-span-1;
+        aspect-ratio: 2 / 1; /* horizontal */
+    }
+      
+}
+
+@layer utilities {
+    
 }
