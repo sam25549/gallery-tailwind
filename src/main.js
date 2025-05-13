@@ -1,3 +1,4 @@
+
 import { ImageGallery } from './imageService.js';
 
 class SearchForm {
@@ -11,8 +12,8 @@ class SearchForm {
   }
 
   initializeEventListeners() {
-    this.form.addEventListener('submit', (e) => this.handleSubmit(e));
-    this.input.addEventListener('input', (e) => this.handleInput(e));
+    this.form.addEventListener('submit', (event) => this.handleSubmit(event));
+    this.input.addEventListener('input', (event) => this.handleInput(event));
   }
 
   async handleSubmit(e) {

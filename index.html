@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bento Gallery | Tailwind Grid</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/src/style.css">
 </head>
 
 <body class="bg-gray-200">
@@ -17,7 +17,6 @@
           <input 
             type="text" 
             id="searchInput" 
-            class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
             placeholder="Buscar imágenes..."
             required
             minlength="3"
@@ -125,8 +124,11 @@
         <div class="box">
           <img src="https://picsum.photos/320/320?grayscale&random=30" alt="Random Img"/>
         </div>
-      
-    </div>
+      </div>
+
+      <div id="pagination" class="w-full">
+        <!-- acá va la paginación -->
+      </div>
   </main>
   <script type="module" src="/src/main.js"></script>
 </body>
